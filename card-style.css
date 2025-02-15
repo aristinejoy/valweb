@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4b6d5;
+    overflow: hidden;
+}
+
+input#open {
+    display: none;
+}
+
+.val-card {
+    position: relative;
+    width: 500px;
+    height: 450px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: .3s;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.card-front {
+    position: relative;
+    background-color: white;
+    width: 500px;
+    height: 650px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset100px 20px 100px rgba(0, 0, 0, .13), 30px 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 10px 10px;
+    transition: .3s;
+}
+
+.card-front {
+    content: "";
+    position: absolute;
+}
+
+.card-front:before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 630px;
+    background-color: #f8a1cc;
+    top: 10px;
+    left: 10px;
+}
+
+.pic4 {
+    position: absolute;
+    height: 600px;
+    left: 220;
+    top: 140;
+    box-shadow: inset;
+}
+
+.pic4:after {
+    display: none;
+}
+
+.front-text {
+    position: absolute;
+    font: arial;
+    color: white;
+    font-size: 20px;
+    left: 590;
+    top: 630;
+}
+
+.open-text {
+    position: absolute;
+    font: arial;
+    color: white;
+    font-size: 10px;
+    left: 590;
+    top: 65;
+}
+
+.message {
+    position: absolute;
+    font: arial;
+    color: black;
+    font-size: 13px;
+    left: 85;
+    top: 50;
+    width: 360;
+}
+
+.message2 {
+    position: absolute;
+    font: arial;
+    color: black;
+    font-size: 13px;
+    left: 85;
+    top: 360;
+    width: 145;
+}
+
+.card-inside {
+    position: absolute;
+    background-color: white;
+    width: 500px;
+    height: 650px;
+    z-index: -1;
+    left: 520;
+    top: 37;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.card-inside:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background-color: white;
+    top: 5px;
+    left: 0px;
+}
+
+.open {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 900;
+    cursor: pointer;
+}
+
+#open:checked ~ .card-front {
+    transform: rotateY(-155deg);
+}
+
+button {
+    background-color: #ff76af;
+    border: none;
+    position: relative;
+    transform: translateY(-5%, -5%);
+    top: 85%;
+    left: 105%;
+    padding: 2px 5px;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 5px;
+    letter-spacing: 1;
+    width: 90px;
+    letter-spacing: none;
+}
+
